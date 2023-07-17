@@ -1,4 +1,4 @@
-package com.example.uptodo.ui.main
+package com.example.uptodo.ui.screens.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
