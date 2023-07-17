@@ -10,7 +10,85 @@
             style="@style/imageButton"
             android:src="@drawable/ic_arrow_left"
             tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textView.toolbar"
+            android:text="@string/title_settings" />
     </FrameLayout>
 
+    <TextView
+        style="@style/textView.title"
+        android:text="@string/title_settings" />
+
+    <LinearLayout
+        style="@style/layoutItemStyle"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            style="@style/imageStyle"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_brush" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_marginStart="10dp"
+            android:text="@string/change_app_color" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            style="@style/imageStyle"
+            android:src="@drawable/ic_arrow_right"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/layoutItemStyle">
+
+        <ImageView
+            style="@style/imageStyle"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_text" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_marginStart="10dp"
+            android:text="@string/change_app_typography" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            style="@style/imageStyle"
+            android:src="@drawable/ic_arrow_right"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/layoutItemStyle">
+
+        <ImageView
+            style="@style/imageStyle"
+            android:src="@drawable/ic_language"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_marginStart="10dp"
+            android:text="@string/change_app_language" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            style="@style/imageStyle"
+            android:src="@drawable/ic_arrow_right"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
 
 </LinearLayout>
