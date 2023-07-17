@@ -19,7 +19,7 @@
     <item
         android:id="@+id/nav_focuse"
         android:icon="@drawable/ic_clock"
-        android:title="@string/bottom_nav_title_focuse"
+        android:title="@string/bottom_nav_title_focus"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/nav_profile"

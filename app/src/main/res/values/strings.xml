@@ -2,7 +2,7 @@
     <string name="app_name">UpTodo</string>
     <string name="bottom_nav_title_index">Index</string>
     <string name="bottom_nav_title_calendar">Calendar\n</string>
-    <string name="bottom_nav_title_focuse">Focuse</string>
+    <string name="bottom_nav_title_focus">Focus</string>
     <string name="bottom_nav_title_profile">Profile\n\n</string>
     <string name="title_settings">Settings</string>
     <string name="change_app_color">Change app color</string>
