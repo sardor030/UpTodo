@@ -1,7 +1,8 @@
-package com.example.uptodo
+package com.example.uptodo.ui.screens.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.uptodo.R
 
 class MainActivity : AppCompatActivity() {
 
