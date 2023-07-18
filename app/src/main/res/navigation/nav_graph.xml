@@ -7,7 +7,24 @@
 
     <fragment
         android:id="@+id/indexFragment"
-        android:name="com.example.uptodo.ui.screens.index.IndexFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.index.IndexFragment"
         android:label="fragment_index"
         tools:layout="@layout/fragment_index" />
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.calendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.focus.FocusFragment"
+        android:label="fragment_focus"
+        tools:layout="@layout/fragment_focus" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.uptodo.ui.screens.index
+package com.example.uptodo.ui.screens.home.fragments.focus
 
 import android.os.Bundle
 import android.view.View
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.uptodo.R
 
 
-class IndexFragment : Fragment(R.layout.fragment_index) {
+class FocusFragment : Fragment(R.layout.fragment_focus) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
