@@ -41,9 +41,5 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         llChangeLanguage?.setOnClickListener {
             changeLanguageDialog.show(parentFragmentManager, changeLanguageDialog.tag)
         }
-
-        changeLanguageDialog.onAcceptClick = {
-            //todo
-        }
     }
 }
