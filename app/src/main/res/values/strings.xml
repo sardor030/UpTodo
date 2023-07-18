@@ -8,4 +8,6 @@
     <string name="change_app_color">Change app color</string>
     <string name="change_app_typography">Change app typography</string>
     <string name="change_app_language">Change app language</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

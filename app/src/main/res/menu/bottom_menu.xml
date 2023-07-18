@@ -6,25 +6,25 @@
         android:id="@+id/nav_index"
         android:icon="@drawable/ic_home"
         android:title="@string/bottom_nav_title_index"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/nav_calendar"
         android:icon="@drawable/ic_calendar"
         android:title="@string/bottom_nav_title_calendar"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/nav_add"
         android:title=""
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/nav_focuse"
         android:icon="@drawable/ic_clock"
         android:title="@string/bottom_nav_title_focus"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_user"
         android:title="@string/bottom_nav_title_profile"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
 
 </menu>
