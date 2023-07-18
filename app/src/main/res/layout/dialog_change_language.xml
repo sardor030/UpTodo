@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialogStyle"
+    android:orientation="vertical"
+    tools:layout_gravity="center">
+
+    <include layout="@layout/dialog_header" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checkedButton="@id/dialog_language_english">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/dialog_language_english"
+            style="@style/dialogItemStyle"
+            android:text="@string/english" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/dialog_language_uzbek"
+            style="@style/dialogItemStyle"
+            android:text="@string/uzbek" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/dialog_language_russian"
+            style="@style/dialogItemStyle"
+            android:text="@string/russian" />
+    </RadioGroup>
+
+    <include layout="@layout/dialog_buttons" />
+
+</LinearLayout>

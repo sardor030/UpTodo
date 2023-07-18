@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="28dp"
+    android:orientation="horizontal"
+    tools:background="@color/dark_gray">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_dialog_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginEnd="2.5dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_r4"
+        android:text="@string/btn_cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_color" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_r4"
+        android:backgroundTint="@color/primary_color"
+        android:text="@string/btn_ok"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>
