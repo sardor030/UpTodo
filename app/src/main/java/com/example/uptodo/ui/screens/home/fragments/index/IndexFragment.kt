@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.uptodo.R
 
 
-class IndexFragment : Fragment(R.layout.fragment_index) {
+class IndexFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

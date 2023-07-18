@@ -43,19 +43,63 @@
 
     </LinearLayout>
 
-    <EditText
-        tools:hint="Search for your task..."
-        style="@style/textView"
-        android:textSize="16sp"
-        android:textColor="@color/gray"
-        android:textColorHint="@color/gray"
-        android:drawablePadding="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_card_r4_gray_stroke"
-        android:drawableStart="@drawable/ic_search"
-        android:padding="12dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="@string/search_hint"
+            style="@style/textView"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card_r4_gray_stroke"
+            android:drawableStart="@drawable/ic_search"
+            android:padding="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_index_desc"
+            android:layout_marginTop="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_checklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            tools:text="What do you want to do today?"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            style="@style/textView"/>
+
+        <TextView
+            tools:text="Tap + to add your tasks"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            style="@style/textView"/>
+
+    </LinearLayout>
 
 </LinearLayout>

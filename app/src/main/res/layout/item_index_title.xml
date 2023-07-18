@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_dark_gray_card_r6"
+    android:layout_marginTop="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        tools:text="Today"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="12sp"
+        style="@style/textView"
+        android:drawablePadding="10dp"
+        app:drawableEndCompat="@drawable/ic_arrow_down" />
+
+</LinearLayout>

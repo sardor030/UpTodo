@@ -9,7 +9,7 @@
         android:id="@+id/indexFragment"
         android:name="com.example.uptodo.ui.screens.home.fragments.index.IndexFragment"
         android:label="fragment_index"
-        tools:layout="@layout/fragment_index" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/calendarFragment"
