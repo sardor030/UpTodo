@@ -3,11 +3,13 @@ package com.example.uptodo.ui.screens.home
 
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.uptodo.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -21,6 +23,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         initViews()
 
         initNavGraph()
+
+        initListener()
     }
 
     private fun initViews() {
@@ -35,5 +39,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         navController?.let { bottomNav?.setupWithNavController(it) }
     }
 
+    private fun initListener() {
+
+        btnAdd?.setOnClickListener { openBottomSheet() }
+    }
+
+    private fun openBottomSheet() {
+
+        val bottomSheetDialog = BottomSheetDialog(requireContext())
+        bottomSheetDialog.setContentView(R.layout.bottom_sheet_home)
+
+        val bottomSheetView =
+            bottomSheetDialog.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+        bottomSheetView?.setBackgroundResource(R.drawable.bg_home_bottom_sheet)
+        bottomSheetDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+        bottomSheetDialog.show()
+    }
 
 }

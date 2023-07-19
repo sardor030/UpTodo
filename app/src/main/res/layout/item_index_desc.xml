@@ -47,7 +47,7 @@
         android:paddingHorizontal="8dp"
         android:paddingVertical="4dp"
         android:textSize="12sp"
-        app:drawableStartCompat="@drawable/ic_flag"
+        app:drawableStartCompat="@drawable/ic_flag_14"
         tools:text="1" />
 
     <TextView

@@ -1,4 +1,4 @@
-package com.example.uptodo.screens.settings
+package com.example.uptodo.ui.screens.settings
 
 import androidx.fragment.app.Fragment
 import com.example.uptodo.R

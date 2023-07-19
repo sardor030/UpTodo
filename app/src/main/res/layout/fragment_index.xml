@@ -45,7 +45,7 @@
 
     <LinearLayout
         android:orientation="vertical"
-
+        android:visibility="gone"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
@@ -62,7 +62,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_card_r4_gray_stroke"
             android:drawableStart="@drawable/ic_search"
-            android:padding="12dp" />
+            android:padding="12dp"
+            tools:ignore="Autofill,TextFields" />
 
         <androidx.recyclerview.widget.RecyclerView
             tools:listitem="@layout/item_index_desc"
@@ -74,7 +75,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
+        android:visibility="visible"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
@@ -89,13 +90,13 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            tools:text="What do you want to do today?"
+            android:text="@string/title_empty_list_index"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             style="@style/textView"/>
 
         <TextView
-            tools:text="Tap + to add your tasks"
+            android:text="@string/add_task"
             android:textSize="16sp"
             android:layout_marginTop="10dp"
             style="@style/textView"/>
