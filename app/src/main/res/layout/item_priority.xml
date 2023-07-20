@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
     android:layout_marginTop="16dp"
-    android:background="@drawable/rounded_dark_gray_card_r4"
-    android:backgroundTint="@color/light_black"
+    android:id="@+id/ll_priority"
+    android:background="@drawable/rounded_light_black_card_r4"
     android:gravity="center_horizontal"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical">
@@ -20,6 +20,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
+        android:id="@+id/tv_level"
         style="@style/textView"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="7dp"

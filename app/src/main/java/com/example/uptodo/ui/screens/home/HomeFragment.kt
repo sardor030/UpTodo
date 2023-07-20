@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -12,7 +13,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.uptodo.R
+import com.example.uptodo.mock.HomeMockito
+import com.example.uptodo.ui.screens.home.lists.PriorityAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -70,11 +74,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         bottomSheetDialog.show()
     }
 
-    @SuppressLint("InflateParams")
+    @SuppressLint("InflateParams", "MissingInflatedId")
     private fun openPriorityDialog() {
         val dialog = AlertDialog.Builder(requireContext()).create()
         val view = layoutInflater.inflate(R.layout.dialog_task_priority, null)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val rvPriority = view.findViewById<RecyclerView>(R.id.rv_priority)
+        val adapter = PriorityAdapter()
+//        adapter.onClick = {
+//            it
+//        }
+
+        Log.e("RRR","${HomeMockito.priorityList.size }")
+        adapter.list = HomeMockito.priorityList
+        rvPriority.adapter = adapter
 
         dialog.setView(view)
         dialog.show()

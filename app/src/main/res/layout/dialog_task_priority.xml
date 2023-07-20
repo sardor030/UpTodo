@@ -1,71 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center_horizontal"
-    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/rounded_dark_gray_card_r4"
-    android:orientation="vertical">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
 
     <TextView
-        android:text="@string/priority_dialog_title"
         style="@style/textView"
-        android:fontFamily="@font/ft_lato_bold"
         android:layout_margin="10dp"
+        android:fontFamily="@font/ft_lato_bold"
+        android:text="@string/priority_dialog_title"
         android:textSize="16sp" />
 
     <View
-        android:layout_marginHorizontal="8dp"
-        android:background="@color/light_gray"
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/light_gray" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="8dp"
-        app:spanCount="4"
-        android:layout_marginHorizontal="4dp"
-        tools:listitem="@layout/item_priority"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:id="@+id/rv_priority"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/item_priority" />
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:paddingHorizontal="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
         <TextView
-            android:text="@string/cancel"
-            android:layout_weight="1"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="24dp"
+            style="@style/textView"
             android:layout_width="0dp"
-            android:gravity="center_horizontal"
+            android:layout_weight="1"
             android:background="@drawable/rounded_dark_gray_card_r4"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:text="@string/cancel"
             android:textColor="@color/primary_color"
-            android:textSize="16sp"
-            style="@style/textView"/>
+            android:textSize="16sp" />
 
         <View
             android:layout_width="15dp"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp" />
 
         <TextView
-            android:text="@string/save"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="24dp"
+            style="@style/textView"
             android:layout_width="0dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_dark_gray_card_r4"
             android:backgroundTint="@color/primary_color"
-            android:textSize="16sp"
-            style="@style/textView"/>
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:text="@string/save"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
