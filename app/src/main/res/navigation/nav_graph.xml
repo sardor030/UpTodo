@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav_graph"
-    app:startDestination="@id/settingsFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/indexFragment">
 
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.uptodo.ui.screens.settings.SettingsFragment"
-        tools:layout="@layout/fragment_settings" />
+        android:id="@+id/indexFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.index.IndexFragment"
+        android:label="fragment_index"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.calendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.focus.FocusFragment"
+        android:label="fragment_focus"
+        tools:layout="@layout/fragment_focus" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.uptodo.ui.screens.home.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

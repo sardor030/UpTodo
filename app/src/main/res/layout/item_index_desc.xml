@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/rounded_dark_gray_card_r4">
+
+    <ImageView
+        android:id="@+id/iv_ellipse"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_ellipse"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/textView"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/iv_ellipse"
+        android:textSize="16sp"
+        tools:text="Do Math Homework" />
+
+    <TextView
+        style="@style/textView"
+        android:layout_below="@id/tv_title"
+        android:layout_alignStart="@id/tv_title"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        tools:text="Today At 16:45" />
+
+    <TextView
+        android:id="@+id/tv_flag"
+        style="@style/textView"
+        android:layout_below="@id/tv_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_primary_color_stroke_card_r4"
+        android:drawablePadding="5dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_flag_14"
+        tools:text="1" />
+
+    <TextView
+        style="@style/textView"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/tv_flag"
+        android:background="@drawable/rounded_light_blue_card_r4"
+        android:drawablePadding="5dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_mortarboard"
+        tools:text="University" />
+
+</RelativeLayout>

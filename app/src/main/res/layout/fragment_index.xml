@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.screens.home.fragments.index.IndexFragment">
+
+    <LinearLayout
+        style="@style/toolbar"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="9dp"
+            android:src="@drawable/ic_sort"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textView.toolbar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/bottom_nav_title_index" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="@string/search_hint"
+            style="@style/textView"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card_r4_gray_stroke"
+            android:drawableStart="@drawable/ic_search"
+            android:padding="12dp"
+            tools:ignore="Autofill,TextFields" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_index_desc"
+            android:layout_marginTop="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_checklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:text="@string/title_empty_list_index"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            style="@style/textView"/>
+
+        <TextView
+            android:text="@string/add_task"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            style="@style/textView"/>
+
+    </LinearLayout>
+
+</LinearLayout>
