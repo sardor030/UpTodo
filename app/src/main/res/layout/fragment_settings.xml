@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainScreen"
-    android:orientation="vertical">
+    style="@style/screenStyle"
+    android:orientation="vertical"
+    tools:context=".ui.screens.settings.SettingsFragment">
 
-    <FrameLayout style="@style/toolbar">
+    <FrameLayout style="@style/toolbarStyle">
 
         <androidx.appcompat.widget.AppCompatImageButton
-            style="@style/imageButton"
+            style="@style/imageButtonStyle"
             android:src="@drawable/ic_arrow_left"
             tools:ignore="ContentDescription" />
 
         <TextView
-            style="@style/textView.toolbar"
+            style="@style/textStyle.toolbar"
             android:text="@string/title_settings" />
     </FrameLayout>
 
     <TextView
-        style="@style/textView.title"
+        style="@style/textStyle.title"
         android:text="@string/title_settings" />
 
     <LinearLayout
-        style="@style/layoutItemStyle"
+        android:id="@+id/ll_change_color"
+        style="@style/settingsItemStyle"
         android:layout_marginTop="4dp">
 
         <ImageView
             style="@style/imageStyle"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_brush" />
+            android:src="@drawable/ic_brush" />
 
         <TextView
-            style="@style/textView"
+            style="@style/textStyle"
             android:layout_marginStart="10dp"
             android:text="@string/change_app_color" />
 
@@ -45,15 +47,17 @@
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
-    <LinearLayout style="@style/layoutItemStyle">
+    <LinearLayout
+        android:id="@+id/ll_change_typography"
+        style="@style/settingsItemStyle">
 
         <ImageView
             style="@style/imageStyle"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_text" />
+            android:src="@drawable/ic_text" />
 
         <TextView
-            style="@style/textView"
+            style="@style/textStyle"
             android:layout_marginStart="10dp"
             android:text="@string/change_app_typography" />
 
@@ -68,7 +72,9 @@
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
-    <LinearLayout style="@style/layoutItemStyle">
+    <LinearLayout
+        android:id="@+id/ll_change_language"
+        style="@style/settingsItemStyle">
 
         <ImageView
             style="@style/imageStyle"
@@ -76,7 +82,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            style="@style/textView"
+            style="@style/textStyle"
             android:layout_marginStart="10dp"
             android:text="@string/change_app_language" />
 

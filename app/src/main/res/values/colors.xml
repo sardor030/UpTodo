@@ -5,6 +5,7 @@
     <color name="background">#121212</color>
     <color name="gray">#AFAFAF</color>
     <color name="dark_gray">#363636</color>
+    <color name="light_gray">#979797</color>
     <color name="primary_color">#8687E7</color>
     <color name="light_blue">#809CFF</color>
     <color name="light_gray">#979797</color>

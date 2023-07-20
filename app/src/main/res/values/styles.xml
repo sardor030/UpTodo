@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="mainScreen">
+    <!--     // Layout styles-->
+    <style name="settingsItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <style name="screenStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/background</item>
     </style>
 
-    <style name="toolbar">
+    <style name="toolbarStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:paddingStart">24dp</item>
@@ -19,38 +30,53 @@
         <item name="android:layout_height">24dp</item>
     </style>
 
-    <style name="imageButton" parent="imageStyle">
+    <style name="imageButtonStyle" parent="imageStyle">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
 
-    <style name="textView">
+    <!--    // text styles-->
+    <style name="textStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/ft_lato_regular</item>
     </style>
 
-    <style name="textView.toolbar">
+    <style name="textStyle.toolbar">
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="textView.title">
+    <style name="textStyle.title">
         <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/gray</item>
     </style>
 
-    <style name="layoutItemStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:paddingStart">24dp</item>
-        <item name="android:paddingEnd">24dp</item>
+
+    <!--    // Dialog styles-->
+    <style name="dialogStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/dark_gray</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">4dp</item>
     </style>
+
+    <style name="dialogItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="buttonTint">@color/primary_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">10dp</item>
+    </style>
+
+
 </resources>

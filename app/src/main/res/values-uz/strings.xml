@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UpTodo</string>
+    <string name="bottom_nav_title_calendar">Kalendar</string>
+    <string name="bottom_nav_title_focus">Diqqat</string>
+    <string name="bottom_nav_title_profile">Profil</string>
+    <string name="title_settings">Sozlamalar</string>
+    <string name="title_edit_task_title">Vazifa sarlavhasini tahrirlash</string>
+    <string name="change_app_color">Ilova rangini o\'zgartirish</string>
+    <string name="change_app_typography">Ilova tipografiyasini o\'zgartirish</string>
+    <string name="change_app_language">Ilova tilini o\'zgartirish</string>
+    <string name="btn_cancel">Bekor qilish</string>
+    <string name="btn_ok">OK</string>
+    <string name="english">Inglizcha</string>
+    <string name="uzbek">O\'zbekcha</string>
+    <string name="russian">Ruscha</string>
+</resources>

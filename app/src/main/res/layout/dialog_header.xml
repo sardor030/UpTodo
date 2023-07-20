@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/dark_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textStyle"
+        android:text="@string/title_edit_task_title"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+</LinearLayout>
