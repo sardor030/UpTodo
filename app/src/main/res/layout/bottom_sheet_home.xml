@@ -8,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        tools:text="Add Task"
+        android:text="@string/home_bottom_sheet_title"
         android:textSize="20sp"
         android:fontFamily="@font/ft_lato_bold"
         style="@style/textView"/>

@@ -15,4 +15,8 @@
     <string name="description">Description</string>
     <string name="title_empty_list_index">What do you want to do today?</string>
     <string name="add_task">Tap + to add your tasks</string>
+    <string name="home_bottom_sheet_title">Add Task</string>
+    <string name="priority_dialog_title">Task Priority</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>

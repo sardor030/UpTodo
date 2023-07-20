@@ -1,9 +1,14 @@
 package com.example.uptodo.ui.screens.home
 
 
+import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -44,17 +49,35 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         btnAdd?.setOnClickListener { openBottomSheet() }
     }
 
+    @SuppressLint("InflateParams")
     private fun openBottomSheet() {
 
         val bottomSheetDialog = BottomSheetDialog(requireContext())
-        bottomSheetDialog.setContentView(R.layout.bottom_sheet_home)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_home, null)
+        bottomSheetDialog.setContentView(view)
 
         val bottomSheetView =
             bottomSheetDialog.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
         bottomSheetView?.setBackgroundResource(R.drawable.bg_home_bottom_sheet)
-        bottomSheetDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        bottomSheetDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+
+        val ivPriority = view.findViewById<ImageView>(R.id.iv_priority)
+
+        ivPriority.setOnClickListener {
+            openPriorityDialog()
+        }
 
         bottomSheetDialog.show()
+    }
+
+    @SuppressLint("InflateParams")
+    private fun openPriorityDialog() {
+        val dialog = AlertDialog.Builder(requireContext()).create()
+        val view = layoutInflater.inflate(R.layout.dialog_task_priority, null)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        dialog.setView(view)
+        dialog.show()
     }
 
 }
