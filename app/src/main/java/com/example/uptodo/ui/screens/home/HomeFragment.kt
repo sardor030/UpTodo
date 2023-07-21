@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -19,7 +18,9 @@ import com.example.uptodo.mock.HomeMockito
 import com.example.uptodo.ui.screens.home.lists.PriorityAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.Calendar
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -66,9 +67,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         bottomSheetDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 
         val ivPriority = view.findViewById<ImageView>(R.id.iv_priority)
+        val ivTime = view.findViewById<ImageView>(R.id.iv_timer)
 
         ivPriority.setOnClickListener {
             openPriorityDialog()
+        }
+
+        ivTime.setOnClickListener {
+            openDatePicker()
         }
 
         bottomSheetDialog.show()
@@ -82,16 +88,28 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val rvPriority = view.findViewById<RecyclerView>(R.id.rv_priority)
         val adapter = PriorityAdapter()
-//        adapter.onClick = {
-//            it
-//        }
-
-        Log.e("RRR","${HomeMockito.priorityList.size }")
         adapter.list = HomeMockito.priorityList
         rvPriority.adapter = adapter
 
         dialog.setView(view)
         dialog.show()
+    }
+
+    private fun openDatePicker(){
+        val datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date")
+            .setTheme(R.style.ThemeOverlay_App_DatePicker).build()
+
+        datePicker.addOnPositiveButtonClickListener { selectedDate ->
+            val calendar = Calendar.getInstance()
+            calendar.timeInMillis = selectedDate
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            val selectedDateText = "$year-${month + 1}-$day"
+//            tvDate?.text = selectedDateText
+        }
+        datePicker.show(childFragmentManager, "datePicker")
     }
 
 }

@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_toEndOf="@id/iv_ellipse"
@@ -26,7 +26,7 @@
         tools:text="Do Math Homework" />
 
     <TextView
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_below="@id/tv_title"
         android:layout_alignStart="@id/tv_title"
         android:layout_marginTop="6dp"
@@ -36,7 +36,7 @@
 
     <TextView
         android:id="@+id/tv_flag"
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_below="@id/tv_title"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="6dp"
@@ -51,7 +51,7 @@
         tools:text="1" />
 
     <TextView
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_below="@id/tv_title"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="12dp"

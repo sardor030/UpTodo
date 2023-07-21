@@ -12,7 +12,7 @@
         android:paddingVertical="5dp"
         android:paddingHorizontal="10dp"
         android:textSize="12sp"
-        style="@style/textView"
+        style="@style/textStyle"
         android:drawablePadding="10dp"
         app:drawableEndCompat="@drawable/ic_arrow_down" />
 

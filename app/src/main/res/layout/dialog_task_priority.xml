@@ -10,7 +10,7 @@
     android:paddingBottom="8dp">
 
     <TextView
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_margin="10dp"
         android:fontFamily="@font/ft_lato_bold"
         android:text="@string/priority_dialog_title"
@@ -41,7 +41,7 @@
         android:paddingHorizontal="8dp">
 
         <TextView
-            style="@style/textView"
+            style="@style/textStyle"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_dark_gray_card_r4"
@@ -57,7 +57,7 @@
             android:layout_height="0dp" />
 
         <TextView
-            style="@style/textView"
+            style="@style/textStyle"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_dark_gray_card_r4"

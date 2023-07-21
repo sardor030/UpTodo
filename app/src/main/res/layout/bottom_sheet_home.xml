@@ -11,11 +11,11 @@
         android:text="@string/home_bottom_sheet_title"
         android:textSize="20sp"
         android:fontFamily="@font/ft_lato_bold"
-        style="@style/textView"/>
+        style="@style/textStyle"/>
     
     <EditText
         android:hint="@string/title"
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_marginTop="14dp"
         android:paddingVertical="8dp"
         android:paddingHorizontal="16dp"
@@ -29,7 +29,7 @@
 
     <EditText
         android:hint="@string/description"
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_marginTop="14dp"
         android:paddingVertical="8dp"
         android:paddingHorizontal="16dp"

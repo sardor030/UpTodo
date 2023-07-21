@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/tv_level"
-        style="@style/textView"
+        style="@style/textStyle"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="7dp"
         android:textSize="16sp"
