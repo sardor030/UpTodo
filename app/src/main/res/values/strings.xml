@@ -28,4 +28,5 @@
     <string name="english">English</string>
     <string name="uzbek">Uzbek</string>
     <string name="russian">Russian</string>
+    <string name="choose_time">Choose Time</string>
 </resources>

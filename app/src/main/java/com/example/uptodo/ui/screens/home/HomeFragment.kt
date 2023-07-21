@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
@@ -18,9 +19,7 @@ import com.example.uptodo.mock.HomeMockito
 import com.example.uptodo.ui.screens.home.lists.PriorityAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.util.Calendar
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -95,21 +94,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         dialog.show()
     }
 
-    private fun openDatePicker(){
-        val datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date")
-            .setTheme(R.style.ThemeOverlay_App_DatePicker).build()
+    @SuppressLint("CutPasteId")
+    private fun openDatePicker() {
+        val dialog = AlertDialog.Builder(requireContext()).create()
+        val view = layoutInflater.inflate(R.layout.dialog_date_picker, null)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        datePicker.addOnPositiveButtonClickListener { selectedDate ->
-            val calendar = Calendar.getInstance()
-            calendar.timeInMillis = selectedDate
-            val year = calendar.get(Calendar.YEAR)
-            val month = calendar.get(Calendar.MONTH)
-            val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-            val selectedDateText = "$year-${month + 1}-$day"
-//            tvDate?.text = selectedDateText
+        val btnTime = view.findViewById<TextView>(R.id.tv_time)
+        btnTime.setOnClickListener {
+            openTimePicker()
         }
-        datePicker.show(childFragmentManager, "datePicker")
+
+        dialog.setView(view)
+        dialog.show()
     }
 
+    private fun openTimePicker() {
+
+    }
 }
