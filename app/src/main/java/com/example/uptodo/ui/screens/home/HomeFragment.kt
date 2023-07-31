@@ -101,8 +101,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         val btnTime = view.findViewById<TextView>(R.id.tv_time)
+        val tvCancel = view.findViewById<TextView>(R.id.tv_cancel)
         btnTime.setOnClickListener {
             openTimePicker()
+            dialog.dismiss()
+        }
+
+        tvCancel.setOnClickListener {
+            dialog.dismiss()
         }
 
         dialog.setView(view)
@@ -110,6 +116,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun openTimePicker() {
+        val dialog = AlertDialog.Builder(requireContext()).create()
+        val view = layoutInflater.inflate(R.layout.dialog_time_picker, null)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
+        val tvSave = view.findViewById<TextView>(R.id.tv_save)
+        val tvCancel = view.findViewById<TextView>(R.id.tv_cancel)
+        tvSave.setOnClickListener {
+
+        }
+
+        tvCancel.setOnClickListener {
+            dialog.cancel()
+        }
+
+        dialog.setView(view)
+        dialog.show()
     }
 }
